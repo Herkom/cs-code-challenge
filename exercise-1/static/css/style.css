@@ -91,10 +91,10 @@ h1{
 .userData{
     width: 100%;
     background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%);
     position: absolute;
     bottom: 0;
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -115,6 +115,9 @@ h1{
     opacity: 0;
     transition: all .3s ease;
     margin-top: 0;
+}
+.userCard.beingClicked .userData{
+    padding: 1rem;
 }
 .userCard.beingClicked .userData .userCreatedDate,
 .userCard.beingClicked .userData .userId{

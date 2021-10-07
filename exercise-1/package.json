@@ -1,0 +1,12 @@
+{
+  "name": "simple-node-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simple-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/simple-server.js"
+  },
+  "author": "Omar Ignacio Guadarrama Hernández",
+  "license": "MIT"
+}
