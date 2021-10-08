@@ -1,6 +1,5 @@
-//import Handlebars from 'handlebars';
-import HandlebarsPlugin from "handlebars-webpack-plugin";
-import { UsersCard } from '../templates/UsersCard';
+
+const template = require("../templates/UsersCard.handlebars");
 
 const fetchData = async() => {
     const usersList = 'https://615485ee2473940017efaed3.mockapi.io/assessment';
@@ -25,7 +24,7 @@ const renderUsers = async() => {
         return user;
     });
 
-    let template = HandlebarsPlugin.compile(UsersCard);
+    //let template = HandlebarsPlugin.compile(UsersCard);
     let result = template(usersWithFormattedDate)
     
     return result;

@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HandlebarsPlugin = require("handlebars-webpack-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -12,7 +11,7 @@ module.exports = {
         extensions: ['.js']
     },
     module: {
-        rules: [
+        rules: [    
             {
                 test: /\.m?.js$/,
                 exclude: /node_modules/,
@@ -20,7 +19,11 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             },
-            { test: /\.handlebars$/, loader: "handlebars-loader" }
+            { test: /\.handlebars$/,
+                use:{
+                    loader: "handlebars-loader"
+                }
+            }
         ]
     },
     plugins: [
