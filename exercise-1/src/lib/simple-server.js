@@ -5,10 +5,7 @@ const path = require('path');
 const http = require('http');
 const hostname = '127.0.0.1';
 const port = 3000;
-const staticBasePath = './static';
-const open = require('open')
-
-
+const staticBasePath = './src';
 
 const staticServe = function(req, res) {
     const resolvedBase = path.resolve(staticBasePath);
@@ -33,5 +30,4 @@ const httpServer = http.createServer(staticServe);
 
 httpServer.listen(port, hostname, () => {
   console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
-  open(`http://${hostname}:${port}/`);
 });

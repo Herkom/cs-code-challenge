@@ -1,12 +1,33 @@
 {
-  "name": "simple-node-server",
+  "name": "exercise-1",
   "version": "1.0.0",
-  "description": "",
-  "main": "simple-server.js",
+  "description": "Exercise 1 - Client Side Developer Skill Assesment",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node lib/simple-server.js"
+    "build": "webpack --mode production"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Herkom/cs-code-challenge.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css"
+  ],
   "author": "Omar Ignacio Guadarrama Hernández",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Herkom/cs-code-challenge.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  }
 }

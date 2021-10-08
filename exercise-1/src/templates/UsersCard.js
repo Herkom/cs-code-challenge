@@ -1,0 +1,15 @@
+const UsersCard =    `{{#each this}}
+<li id="{{id}}" class="userCard" onclick="displayMoreData({{{id}}})">
+    <img src="{{avatar}}" alt="{{name}}" class="userAvatar">
+    <article class="userData">
+        <h2 class="userName">{{name}}</h2>
+        <p class="userId"><strong>ID:</strong> {{id}}</p>
+        <p class="userCreatedDate">
+            <svg class="icon-clock"><use xlink:href="#icon-clock"></use></svg> {{createdAt}}
+        </p>
+        
+    </article>
+</li>
+{{/each}}`;
+
+export {UsersCard}
