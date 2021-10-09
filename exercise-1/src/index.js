@@ -1,10 +1,10 @@
 import { Template } from "./templates/Template";
+import { displayMoreData } from "./utils/displayMoreData";
+import './styles/main.css';
 
 (async function App() {
-    /* function displayMoreData(id){
-        document.querySelector(`#${CSS.escape(id)}`).classList.toggle('beingClicked');
-    } */
-    
+    window.displayMoreData = displayMoreData;
+
     const main = null || document.querySelector('#main');
     main.insertAdjacentHTML('afterbegin', await Template());
 })();

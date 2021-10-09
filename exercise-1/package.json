@@ -1,11 +1,23 @@
 {
   "name": "exercise-1",
+  "jest": {
+    "transform": {
+      "\\.handlebars$": "jest-handlebars",
+      "\\.js$": "babel-jest"
+    },
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ]
+  },
   "version": "1.0.0",
   "description": "Exercise 1 - Client Side Developer Skill Assesment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "test": "jest",
+    "start": "node ./src/lib/simple-server.js",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -23,12 +35,19 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
     "@babel/plugin-transform-runtime": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "babel-jest": "^27.2.5",
     "babel-loader": "^8.2.2",
+    "css-loader": "^6.3.0",
     "handlebars": "^4.7.7",
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.2.5",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-handlebars": "^1.0.1",
+    "mini-css-extract-plugin": "^2.4.2",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0"
   }

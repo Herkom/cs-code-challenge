@@ -30,4 +30,4 @@ const renderUsers = async() => {
     return result;
 }
 
-export { renderUsers }
+export { renderUsers, fetchData }

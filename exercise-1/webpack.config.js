@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -13,13 +14,20 @@ module.exports = {
     module: {
         rules: [    
             {
-                test: /\.m?.js$/,
+                test: /\.m?js$/,
                 exclude: /node_modules/,
                 use:{
                     loader: 'babel-loader'
                 }
             },
-            { test: /\.handlebars$/,
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader,
+                'css-loader'
+                ],
+            },
+            {
+                test: /\.handlebars$/,
                 use:{
                     loader: "handlebars-loader"
                 }
@@ -32,5 +40,6 @@ module.exports = {
             template: './public/index.html',
             filename: './index.html',
         }),
+        new MiniCssExtractPlugin(),
     ]
 }

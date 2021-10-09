@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 1 - Users List</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!--This SVG ELEMENT CONTAINS SVG DEFINITION-->
@@ -15,6 +16,19 @@
         </symbol>
         </defs>
     </svg>
-    <div id="main"></div>
+
+    <main>
+        <h1>Users List</h1>
+        <section>
+            <ul id="list" class="usersList">
+            </ul>            
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        renderUsers();
+    </script>
 </body>
 </html>
